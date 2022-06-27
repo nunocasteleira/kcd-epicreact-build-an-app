@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+[data-reach-dialog-content] {
+  @apply max-w-md rounded pb-12 shadow-md w-full my-[10vh] mx-auto md:w-auto md:my-[20vh] !important
+}
