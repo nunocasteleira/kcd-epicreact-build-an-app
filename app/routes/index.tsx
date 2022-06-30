@@ -1,9 +1,9 @@
-import { cloneElement, useState } from "react";
+import { cloneElement } from "react";
 import { Logo } from "~/components/logo";
 import { Button } from "~/components/button";
 import styles from "@reach/dialog/styles.css";
-import Dialog from "@reach/dialog";
 import { Modal, ModalContents, ModalOpenButton } from "~/components/modal";
+import { Input } from "~/components/lib";
 
 export function links() {
   return [{ rel: "stylesheet", href: styles }];
@@ -30,18 +30,11 @@ function LoginForm({
     <form onSubmit={handleSubmit} className="flex flex-col items-stretch">
       <div className="flex flex-col my-3 mx-auto w-full max-w-xs">
         <label htmlFor="username">Username</label>
-        <input
-          className="rounded border border-gray-200 bg-gray-100 py-2 px-3"
-          id="username"
-        />
+        <Input id="username" />
       </div>
       <div className="flex flex-col my-3 mx-auto w-full max-w-xs">
         <label htmlFor="password">Password</label>
-        <input
-          className="rounded border border-gray-200 bg-gray-100 py-2 px-3"
-          id="password"
-          type="password"
-        />
+        <Input id="password" type="password" />
       </div>
       <div className="my-3 mx-auto w-full max-w-xs">
         {cloneElement(submitButton, { type: "submit" })}
