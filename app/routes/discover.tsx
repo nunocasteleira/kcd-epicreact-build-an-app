@@ -27,14 +27,13 @@ export const action: ActionFunction = async ({ request }) => {
       formError: `Form not submitted correctly.`,
     });
   }
-  const response = await getCharacters(query ?? "");
+  const response = await getCharacters(query);
   return json(response);
 };
 
 export default function DiscoverRoute() {
   const actionData = useActionData<ActionData>();
   const characters = actionData?.data?.results;
-  console.log(characters);
 
   return <DiscoverCharactersScreen characters={characters} />;
 }

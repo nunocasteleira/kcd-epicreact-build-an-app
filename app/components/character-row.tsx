@@ -9,7 +9,7 @@ function CharacterRow({ character }: { character: Character }) {
     <div className="flex items-center content-end relative">
       <div
         aria-labelledby={id}
-        className="min-h-[270px] flex-grow-[2] grid grid-cols-[140px_1fr] gap-5 border-gray-200 text-gray-900 p-5 rounded hover:focus:shadow"
+        className="min-h-[270px] flex-grow-[2] grid grid-cols-[140px_1fr] gap-5 border border-gray-200 text-gray-900 p-5 rounded hover:shadow focus:shadow"
       >
         <div className="w-24 md:w-36">
           <img
