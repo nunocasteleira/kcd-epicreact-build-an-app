@@ -15,11 +15,14 @@ function Button({
   return (
     <button
       {...buttonProps}
-      className={clsx("py-2 px-3 leading-4 border-none rounded text-white", {
-        "bg-indigo-700 text-white": variant === "primary",
-        "bg-gray-100 text-gray-900": variant === "secondary",
-        className,
-      })}
+      className={clsx(
+        "py-2 px-3 leading-4 border-none rounded text-white",
+        {
+          "bg-indigo-700 text-white": variant === "primary",
+          "bg-gray-100 text-gray-900": variant === "secondary",
+        },
+        className
+      )}
     >
       {children}
     </button>
